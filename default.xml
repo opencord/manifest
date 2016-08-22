@@ -9,4 +9,5 @@
            sync-j="4" />
 
 <project path="cord" name="cord" groups="platform"/>
+<project path="cord/components/cord-onos-publisher" name="cord-onos-publisher" groups="platform, onos-apps"/>
 </manifest>
