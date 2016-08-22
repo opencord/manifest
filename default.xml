@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="opencord"
+           fetch=".."
+           review="https://gerrit.opencord.org/" />
+  <default revision="master"
+           remote="opencord"
+           sync-j="4" />
+
+<project path="cord" name="cord" groups="platform"/>
+</manifest>
