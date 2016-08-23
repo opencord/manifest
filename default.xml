@@ -18,5 +18,26 @@
 <project path="onos-apps/olt" name="olt" groups="onos"/>
 <project path="onos-apps/vtn" name="vtn" groups="onos"/>
 
+<project path="test" name="cord-tester" groups="test"/>
+<project path="test" name="fabric-oftest" groups="test"/>
+
+<project path="orchestration" name="xos" groups="orchestration"/>
+<project path="orchestration/xos-services/example-service" name="example-service" groups="services"/>
+<project path="orchestration/xos-services/fabric" name="fabric" groups="services"/>
+<project path="orchestration/xos-services/hypercache" name="hypercache" groups="services"/>
+<project path="orchestration/xos-services/metro-net" name="metro-net" groups="services"/>
+<project path="orchestration/xos-services/monitoring" name="monitoring" groups="services"/>
+<project path="orchestration/xos-services/ng-xos-lib" name="ng-xos-lib" groups="services"/>
+<project path="orchestration/xos-services/onos-service" name="onos-service" groups="services"/>
+<project path="orchestration/xos-services/openstack" name="openstack" groups="services"/>
+<project path="orchestration/xos-services/service-profile" name="service-profile" groups="services"/>
+<project path="orchestration/xos-services/vrouter" name="vrouter" groups="services"/>
+<project path="orchestration/xos-services/vsg" name="vsg" groups="services"/>
+<project path="orchestration/xos-services/vtr" name="vtr" groups="services"/>
+
+
+
+
+
 
 </manifest>
