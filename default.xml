@@ -22,7 +22,7 @@
 <project path="test/fabric-oftest" name="fabric-oftest" groups="test"/>
 
 <project path="orchestration" name="xos" groups="orchestration"/>
-<project path="orchestration/xos-services/example-service" name="example-service" groups="services"/>
+<project path="orchestration/xos-services/exampleservice" name="exampleservice" groups="services"/>
 <project path="orchestration/xos-services/fabric" name="fabric" groups="services"/>
 <project path="orchestration/xos-services/hypercache" name="hypercache" groups="services"/>
 <project path="orchestration/xos-services/metro-net" name="metro-net" groups="services"/>
@@ -34,10 +34,5 @@
 <project path="orchestration/xos-services/vrouter" name="vrouter" groups="services"/>
 <project path="orchestration/xos-services/vsg" name="vsg" groups="services"/>
 <project path="orchestration/xos-services/vtr" name="vtr" groups="services"/>
-
-
-
-
-
 
 </manifest>
