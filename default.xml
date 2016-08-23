@@ -11,4 +11,12 @@
 <project path="build/maas" name="maas" groups="build"/>
 <project path="build/platform-install" name="platform-install" groups="build"/>
 
+<project path="onos-apps/aaa" name="aaa" groups="onos"/>
+<project path="onos-apps/cord-config" name="cord-config" groups="onos"/>
+<project path="onos-apps/aaa" name="igmp" groups="onos"/>
+<project path="onos-apps/mcast" name="mcast" groups="onos"/>
+<project path="onos-apps/olt" name="olt" groups="onos"/>
+<project path="onos-apps/vtn" name="vtn" groups="onos"/>
+
+
 </manifest>
