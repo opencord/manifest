@@ -8,6 +8,10 @@
            remote="opencord"
            sync-j="4" />
 
-<project path="cord" name="cord" groups="platform"/>
-<project path="cord/components/cord-onos-publisher" name="cord-onos-publisher" groups="platform, onos-apps"/>
+<project path="build" name="cord" groups="build">
+    <copyfile src="Vagrantfile" dest="build/Vagrantfile">
+</project>
+<project path="build/maas" name="maas" groups="build">
+<project path="build/platform-install" name="platform-install" groups="build">
+
 </manifest>
