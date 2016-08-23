@@ -18,8 +18,8 @@
 <project path="onos-apps/olt" name="olt" groups="onos"/>
 <project path="onos-apps/vtn" name="vtn" groups="onos"/>
 
-<project path="test" name="cord-tester" groups="test"/>
-<project path="test" name="fabric-oftest" groups="test"/>
+<project path="test/cord-tester" name="cord-tester" groups="test"/>
+<project path="test/fabric-oftest" name="fabric-oftest" groups="test"/>
 
 <project path="orchestration" name="xos" groups="orchestration"/>
 <project path="orchestration/xos-services/example-service" name="example-service" groups="services"/>
