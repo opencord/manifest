@@ -9,7 +9,7 @@
            sync-j="4" />
 
 <project path="build" name="cord" groups="build">
-    <copyfile src="Vagrantfile" dest="build/Vagrantfile">
+    <copyfile src="Vagrantfile" dest="build/Vagrantfile"/>
 </project>
 <project path="build/maas" name="maas" groups="build">
 <project path="build/platform-install" name="platform-install" groups="build">
