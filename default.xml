@@ -8,6 +8,9 @@
            remote="opencord"
            sync-j="4" />
 
+<project path="build" name="cord" groups="build">
+    <linkfile src="docs" dest="build/documentation">
+</project>
 <project path="build/maas" name="maas" groups="build"/>
 <project path="build/platform-install" name="platform-install" groups="build"/>
 
