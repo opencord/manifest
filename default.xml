@@ -14,12 +14,12 @@
 <project path="build/platform-install" name="platform-install" groups="build"/>
 
 <project path="onos-apps" name="cord-onos-publisher" groups="onos"/>
-<project path="onos-apps/aaa" name="aaa" groups="onos"/>
-<project path="onos-apps/cord-config" name="config" groups="onos"/>
-<project path="onos-apps/igmp" name="igmp" groups="onos"/>
-<project path="onos-apps/mcast" name="mcast" groups="onos"/>
-<project path="onos-apps/olt" name="olt" groups="onos"/>
-<project path="onos-apps/vtn" name="vtn" groups="onos"/>
+<project path="onos-apps/apps/aaa" name="aaa" groups="onos"/>
+<project path="onos-apps/apps/cord-config" name="config" groups="onos"/>
+<project path="onos-apps/apps/igmp" name="igmp" groups="onos"/>
+<project path="onos-apps/apps/mcast" name="mcast" groups="onos"/>
+<project path="onos-apps/apps/olt" name="olt" groups="onos"/>
+<project path="onos-apps/apps/vtn" name="vtn" groups="onos"/>
 
 <project path="test/cord-tester" name="cord-tester" groups="test"/>
 <project path="test/fabric-oftest" name="fabric-oftest" groups="test"/>
