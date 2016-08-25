@@ -13,6 +13,7 @@
 <project path="build/maas" name="maas" groups="build"/>
 <project path="build/platform-install" name="platform-install" groups="build"/>
 
+<project path="onos-apps" name="cord-onos-publisher" groups="onos"/>
 <project path="onos-apps/aaa" name="aaa" groups="onos"/>
 <project path="onos-apps/cord-config" name="config" groups="onos"/>
 <project path="onos-apps/igmp" name="igmp" groups="onos"/>
