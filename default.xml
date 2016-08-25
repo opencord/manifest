@@ -33,7 +33,6 @@
 <project path="orchestration/xos-services/ng-xos-lib" name="ng-xos-lib" groups="services"/>
 <project path="orchestration/xos-services/onos-service" name="onos-service" groups="services"/>
 <project path="orchestration/xos-services/openstack" name="openstack" groups="services"/>
-<project path="orchestration/xos-services/service-profile" name="service-profile" groups="services"/>
 <project path="orchestration/xos-services/vrouter" name="vrouter" groups="services"/>
 <project path="orchestration/xos-services/vsg" name="vsg" groups="services"/>
 <project path="orchestration/xos-services/vtr" name="vtr" groups="services"/>
