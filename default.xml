@@ -24,6 +24,7 @@
 <project path="test/fabric-oftest" name="fabric-oftest" groups="test"/>
 
 <project path="orchestration" name="xos" groups="orchestration"/>
+<project path="orchestration/service-profile" name="service-profile" groups="orchestration"/>
 <project path="orchestration/xos-services/exampleservice" name="exampleservice" groups="services"/>
 <project path="orchestration/xos-services/fabric" name="fabric" groups="services"/>
 <project path="orchestration/xos-services/hypercache" name="hypercache" groups="services"/>
