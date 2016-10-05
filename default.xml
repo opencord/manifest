@@ -38,4 +38,6 @@
 <project path="orchestration/xos-services/vsg" name="vsg" groups="services"/>
 <project path="orchestration/xos-services/vtr" name="vtr" groups="services"/>
 
+<project path="incubator/voltha" name="voltha" groups="incubation"/>
+
 </manifest>
