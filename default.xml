@@ -26,17 +26,18 @@
 
 <project path="orchestration/xos" name="xos" groups="orchestration"/>
 <project path="orchestration/service-profile" name="service-profile" groups="orchestration"/>
-<project path="orchestration/xos-services/exampleservice" name="exampleservice" groups="orchestration,services"/>
-<project path="orchestration/xos-services/fabric" name="fabric" groups="orchestration,services"/>
-<project path="orchestration/xos-services/hypercache" name="hypercache" groups="orchestration,services"/>
-<project path="orchestration/xos-services/metro-net" name="metro-net" groups="orchestration,services"/>
-<project path="orchestration/xos-services/monitoring" name="monitoring" groups="orchestration,services"/>
-<project path="orchestration/xos-services/ng-xos-lib" name="ng-xos-lib" groups="orchestration,services"/>
-<project path="orchestration/xos-services/onos-service" name="onos-service" groups="orchestration,services"/>
-<project path="orchestration/xos-services/openstack" name="openstack" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vrouter" name="vrouter" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vsg" name="vsg" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vtr" name="vtr" groups="orchestration,services"/>
+<project path="orchestration/xos_services/exampleservice" name="exampleservice" groups="orchestration,services"/>
+<project path="orchestration/xos_services/fabric" name="fabric" groups="orchestration,services"/>
+<project path="orchestration/xos_services/hypercache" name="hypercache" groups="orchestration,services"/>
+<project path="orchestration/xos_services/metro-net" name="metro-net" groups="orchestration,services"/>
+<project path="orchestration/xos_services/monitoring" name="monitoring" groups="orchestration,services"/>
+<project path="orchestration/xos_services/onos-service" name="onos-service" groups="orchestration,services"/>
+<project path="orchestration/xos_services/openstack" name="openstack" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vrouter" name="vrouter" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vsg" name="vsg" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vtr" name="vtr" groups="orchestration,services"/>
+
+<project path="orchestration/xos_libraries/ng-xos-lib" name="ng-xos-lib" groups="orchestration,libraries"/>
 
 <project path="incubator/voltha" name="voltha" groups="incubation"/>
 
