@@ -36,7 +36,7 @@
 <project path="orchestration/xos_services/vrouter" name="vrouter" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vsg" name="vsg" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vtr" name="vtr" groups="orchestration,services"/>
-<project path="orchestration/xos_services/global-xos" name="global-xos" groups="orchestration,services"/>
+<project path="orchestration/xos_services/globalxos" name="globalxos" groups="orchestration,services"/>
 
 <project path="orchestration/xos_libraries/ng-xos-lib" name="ng-xos-lib" groups="orchestration,libraries"/>
 
