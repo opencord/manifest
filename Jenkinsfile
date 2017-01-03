@@ -6,6 +6,6 @@ node ('host-master') {
     
     echo env.BRANCH_NAME
 
-    httpRequest consoleLogResponseBody: true, url: 'https://gerrit.opencord.org/projects/?type=CODE&b=$BRANCH_NAME', validResponseCodes: '200'
+    httpRequest consoleLogResponseBody: true, url: 'https://gerrit.opencord.org/projects/?type=CODE&b=env.BRANCH_NAME', validResponseCodes: '200'
 }
 
