@@ -4,6 +4,6 @@ node ('host-master') {
     println metadata['release_version']
     println metadata['build_onos_apps']
 
-    httpRequest consoleLogResponseBody: true, url: 'https://gerrit.opencord.org/projects/?type=CODE&b=$BRANCH_NAME', validResponseCodes: '200'
+    httpRequest consoleLogResponseBody: true, url: 'https://gerrit.opencord.org/projects/?type=CODE&b=${BRANCH_NAME}', validResponseCodes: '200'
 }
 
