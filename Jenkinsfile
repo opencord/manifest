@@ -4,7 +4,7 @@ node ('host-master') {
     println metadata['release_version']
     println metadata['build_onos_apps']
     
-    echo $BRANCH_NAME
+    echo env.BRANCH_NAME
 
     httpRequest consoleLogResponseBody: true, url: 'https://gerrit.opencord.org/projects/?type=CODE&b=$BRANCH_NAME', validResponseCodes: '200'
 }
