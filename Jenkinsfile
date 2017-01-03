@@ -3,5 +3,7 @@ node ('host-master') {
 
     println metadata['release_version']
     println metadata['build_onos_apps']
+
+    httpRequest consoleLogResponseBody: true, url: 'https://gerrit.opencord.org/projects/?d', validResponseCodes: '200'
 }
 
