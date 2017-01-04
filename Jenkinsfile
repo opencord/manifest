@@ -25,7 +25,6 @@ def createBranch(def proj, def branch, def parent) {
 }
 
 def checkBranchExists(def proj) {
-    println proj
     if (env.IGNORE_LIST.contains(proj)) {
         return
     }
@@ -38,10 +37,10 @@ def checkBranchExists(def proj) {
 
 node ('master') {
     stage 'Release?'
+    mail to: 'ali@onlab.us',
+        subject: "Job '${JOB_NAME}' is waiting up for promotion",
+        body: "Please go to ${BUILD_URL}input and promote or abort the release"
     def metadata = input id: 'release-build', message: 'Should I perform a release?', parameters: [booleanParam(defaultValue: true, description: 'Build and release onos applications', name: 'build_onos_apps'), string(defaultValue: 'None', description: '', name: 'release_version')], submitter: 'ash'
-
-    //println metadata['release_version']
-    //println metadata['build_onos_apps']
 
     stage 'Check and create support branches'
     def url = 'https://gerrit.opencord.org/projects/?type=CODE'
@@ -56,4 +55,7 @@ node ('master') {
     checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: metadata['release_version'] ]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'dd9d4677-2415-4f82-8e79-99dcd530f023', url: 'ssh://jenkins@gerrit.opencord.org:29418/manifest']]]
     sh returnStdout: true, script: 'git checkout ' + metadata['release_version']
     sh returnStdout: true, script: 'cp ' + env.JENKINS_HOME + '/tmp/manifest-' + env.BRANCH_NAME + '.xml default.xml' 
+    //TODO push new bits to manifest repo
+
+    //TODO build and release onos apps
 }
