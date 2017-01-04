@@ -37,14 +37,19 @@ def checkBranchExists(def proj) {
 }
 
 node ('master') {
-    //def metadata = input id: 'release-build', message: 'Should I perform a release?', parameters: [booleanParam(defaultValue: true, description: 'Build and release onos applications', name: 'build_onos_apps'), string(defaultValue: '', description: '', name: 'release_version')], submitter: 'ash'
+    stage 'Release?'
+    def metadata = input id: 'release-build', message: 'Should I perform a release?', parameters: [booleanParam(defaultValue: true, description: 'Build and release onos applications', name: 'build_onos_apps'), string(defaultValue: 'None', description: '', name: 'release_version')], submitter: 'ash'
 
     //println metadata['release_version']
     //println metadata['build_onos_apps']
+
+    stage 'Check and create support branches'
     def url = 'https://gerrit.opencord.org/projects/?type=CODE'
     def response = httpRequest url: url, validResponseCodes: '200'
     def info = jsonParseList(response.content)
     for (index = 0; index < info.size(); index++) {
         checkBranchExists(info[index])
     }
+
+    
 }
