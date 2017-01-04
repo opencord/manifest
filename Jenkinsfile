@@ -42,6 +42,10 @@ node ('master') {
         body: "Please go to ${BUILD_URL}input and promote or abort the release"
     def metadata = input id: 'release-build', message: 'Should I perform a release?', parameters: [booleanParam(defaultValue: true, description: 'Build and release onos applications', name: 'build_onos_apps'), string(defaultValue: 'None', description: '', name: 'release_version')], submitter: 'ash'
 
+    if (metadata['release_version'] == 'None') {
+        error 'Release version cannot be None'
+    }
+
     stage 'Check and create support branches'
     def url = 'https://gerrit.opencord.org/projects/?type=CODE'
     def response = httpRequest url: url, validResponseCodes: '200'
