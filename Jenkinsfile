@@ -55,5 +55,5 @@ node ('master') {
     createBranch('manifest', metadata['release_version'], env.BRANCH_NAME)
     checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: metadata['release_version'] ]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'dd9d4677-2415-4f82-8e79-99dcd530f023', url: 'ssh://jenkins@gerrit.opencord.org:29418/manifest']]]
 
-    sh returnStdout: true, script: 'cp /tmp/manifest-' + env.BRANCH_NAME + '.xml manifest/manifest.xml' 
+    sh returnStdout: true, script: 'cp ' + env.JENKINS_HOME + '/tmp/manifest-' + env.BRANCH_NAME + '.xml manifest/manifest.xml' 
 }
