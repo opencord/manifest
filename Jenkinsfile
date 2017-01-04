@@ -19,8 +19,8 @@ def jsonParseMap(def json) {
     return new groovy.json.JsonSlurperClassic().parseText(j)
 }
 
-def createBranch(def proj, def branch) {
-    cmd = 'ssh -p 29418 gerrit.opencord.org gerrit create-branch ' + proj + " " + branch + " master"
+def createBranch(def proj, def branch, def parent) {
+    cmd = 'ssh -p 29418 gerrit.opencord.org gerrit create-branch ' + proj + " " + branch + " " + parent
     sh returnStdout: true, script: cmd 
 }
 
@@ -32,7 +32,7 @@ def checkBranchExists(def proj) {
     url = 'https://gerrit.opencord.org/projects/' + proj + '/branches/' + env.BRANCH_NAME
     response = httpRequest url: url, validResponseCodes: '200,404'
     if (response.status == 404) {
-        createBranch(proj, env.BRANCH_NAME)
+        createBranch(proj, env.BRANCH_NAME, 'master')
     }
 }
 
@@ -51,5 +51,9 @@ node ('master') {
         checkBranchExists(info[index])
     }
 
-    
+    stage 'Create new manifest branch'
+    createBranch('manifest', metadata['release_version'], env.BRANCH_NAME)
+    checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: metadata['release_version'] ]], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'dd9d4677-2415-4f82-8e79-99dcd530f023', url: 'ssh://jenkins@gerrit.opencord.org:29418/manifest']]]
+
+    sh returnStdout: true, script: 'cp /tmp/manifest-' + env.BRANCH_NAME + '.xml manifest/manifest.xml' 
 }
