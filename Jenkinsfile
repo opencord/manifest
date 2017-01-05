@@ -100,7 +100,7 @@ node ('master') {
                         |A new bleeding edge version of cord is available, feel free to test it. 
                         |You can obtain it using the following commands:
 
-                        |repo init -u https://gerrit.opencord.org/manifest -b ${metadata['release_version']}
+                        |repo init -u https://gerrit.opencord.org/manifest -b ''' + ${metadata['release_version']} + '''
                         |repo sync
 
                         |--
