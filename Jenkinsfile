@@ -32,37 +32,48 @@ def checkBranchExists(def proj) {
     response = httpRequest url: url, validResponseCodes: '200,404'
     if (response.status == 404) {
         createBranch(proj, env.BRANCH_NAME, 'master')
+        return 1
     }
+    return 0
 }
 
 node ('master') {
-    stage 'Release?'
-    mail to: 'ali@onlab.us',
-        subject: "Job '${JOB_NAME}' is waiting up for promotion",
-        body: "Please go to ${BUILD_URL}input and promote or abort the release"
-    def metadata = input id: 'release-build', message: 'Should I perform a release?', parameters: [booleanParam(defaultValue: true, description: 'Build and release onos applications', name: 'build_onos_apps'), string(defaultValue: 'None', description: '', name: 'release_version')], submitter: 'ash'
-
-    if (metadata['release_version'] == 'None') {
-        error 'Release version cannot be None'
-    }
 
     stage 'Check and create support branches'
     def url = 'https://gerrit.opencord.org/projects/?type=CODE'
     def response = httpRequest url: url, validResponseCodes: '200'
     def info = jsonParseList(response.content)
+    def created = 0
     for (index = 0; index < info.size(); index++) {
-        checkBranchExists(info[index])
+        created = created + checkBranchExists(info[index])
     }
 
-    stage 'Create new manifest branch'
-    createBranch('manifest', metadata['release_version'], env.BRANCH_NAME)
-    checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: metadata['release_version'] ]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'WipeWorkspace'], [$class: 'CleanBeforeCheckout']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'dd9d4677-2415-4f82-8e79-99dcd530f023', url: 'ssh://jenkins@gerrit.opencord.org:29418/manifest']]]
-    sh returnStdout: true, script: 'git checkout ' + metadata['release_version']
-    sh returnStdout: true, script: 'git pull origin ' + metadata['release_version']
-    sh returnStdout: true, script: 'cp ' + env.JENKINS_HOME + '/tmp/manifest-' + env.BRANCH_NAME + '.xml default.xml' 
+    if (created == 0) {
+
+        stage 'Release?'
+        mail to: 'ali@onlab.us',
+            subject: "Job '${JOB_NAME}' is waiting up for promotion",
+            body: "Please go to ${BUILD_URL}input and promote or abort the release"
+        def metadata = input id: 'release-build', message: 'Should I perform a release?',
+             parameters: [booleanParam(defaultValue: true,
+             description: 'Build and release onos applications', name: 'build_onos_apps'), 
+             string(defaultValue: 'None', description: '', name: 'release_version')], submitter: 'ash'
+
+        if (metadata['release_version'] == 'None') {
+            error 'Release version cannot be None'
+        }
+
+        stage 'Create new manifest branch'
+        createBranch('manifest', metadata['release_version'], env.BRANCH_NAME)
+        checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: metadata['release_version'] ]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'WipeWorkspace'], [$class: 'CleanBeforeCheckout']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'dd9d4677-2415-4f82-8e79-99dcd530f023', url: 'ssh://jenkins@gerrit.opencord.org:29418/manifest']]]
+        sh returnStdout: true, script: 'git checkout ' + metadata['release_version']
+        sh returnStdout: true, script: 'git pull origin ' + metadata['release_version']
+        sh returnStdout: true, script: 'cp ' + env.JENKINS_HOME + '/tmp/manifest-' + env.BRANCH_NAME + '.xml default.xml' 
     
-    sh returnStdout: true, script: 'git commit -a -m "JENKINS: Updating manifest"'
-    sh returnStdout: true, script: 'git push origin ' + metadata['release_version']
+        sh returnStdout: true, script: 'git commit -a -m "JENKINS: Updating manifest"'
+        sh returnStdout: true, script: 'git push origin ' + metadata['release_version']
     
     //TODO build and release onos apps
+
+    }
 }
