@@ -2,8 +2,8 @@ import groovy.json.JsonSlurperClassic
 
 env.IGNORE_LIST = ["All-Users"]
 
-env.approvers = 'ali@onlab.us'
-env.recipients = 'ali@onlab.us'
+env.approvers = 'ali@onlab.us,andy@onlab.us'
+env.recipients = 'ali@onlab.us,andy@onlab.us'
 
 @NonCPS
 def jsonParseList(def json) {
