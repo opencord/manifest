@@ -75,7 +75,7 @@ node ('master') {
    
         if (metadata['build_onos_apps']) {
             checkout changelog: false, poll: false, scm: [$class: 'RepoScm', currentBranch: true, 
-                manifestBranch: 'env.BRANCH_NAME', manifestGroup: 'onos', 
+                manifestBranch: env.BRANCH_NAME, manifestGroup: 'onos', 
                 manifestRepositoryUrl: 'https://gerrit.opencord.org/manifest', quiet: true]
             sh returnStdout: true, script: 'mvn -Prelease clean deploy'
         }
