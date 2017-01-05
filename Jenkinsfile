@@ -54,7 +54,7 @@ node ('master') {
     if (created == 0) {
 
         def now = new Date()
-        branch = 'cord-' + now.format("yyyyMMdd-HH:mm", TimeZone.getTimeZone('UTC'))
+        branch = 'cord-' + now.format("yyyyMMddHHmm", TimeZone.getTimeZone('UTC'))
 
         stage 'Release?'
         mail to: env.approvers,
