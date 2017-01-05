@@ -103,6 +103,8 @@ node ('master') {
                         |repo init -u https://gerrit.opencord.org/manifest -b '''.stripMargin() + metadata['release_version'] + '''
                         |repo sync
 
+                        |Have fun!
+
                         |--
                         |CORD Automated Release
                     '''.stripMargin()
