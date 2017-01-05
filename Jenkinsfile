@@ -24,9 +24,9 @@ def createBranch(def proj, def branch, def parent) {
     sh returnStdout: true, script: cmd 
 }
 
-def checkBranchExists(def proj) {
+int checkBranchExists(def proj) {
     if (env.IGNORE_LIST.contains(proj)) {
-        return
+        return 0
     }
     url = 'https://gerrit.opencord.org/projects/' + proj + '/branches/' + env.BRANCH_NAME
     response = httpRequest url: url, validResponseCodes: '200,404'
@@ -43,9 +43,9 @@ node ('master') {
     def url = 'https://gerrit.opencord.org/projects/?type=CODE'
     def response = httpRequest url: url, validResponseCodes: '200'
     def info = jsonParseList(response.content)
-    def created = 0
+    int created = 0
     for (index = 0; index < info.size(); index++) {
-        created = created + checkBranchExists(info[index])
+        created += checkBranchExists(info[index])
     }
 
     if (created == 0) {
