@@ -2,6 +2,9 @@ import groovy.json.JsonSlurperClassic
 
 env.IGNORE_LIST = ["All-Users"]
 
+env.approvers = 'ali@onlab.us,andy@onlab.us, llp@onlab.us'
+env.recipients = 'ali@onlab.us,andy@onlab.us, llp@onlab.us'
+
 @NonCPS
 def jsonParseList(def json) {
     j = json.minus(")]}'")
@@ -50,14 +53,17 @@ node ('master') {
 
     if (created == 0) {
 
+        def now = new Date()
+        branch = 'cord-' + now.format("yyyyMMddHHmm", TimeZone.getTimeZone('UTC'))
+
         stage 'Release?'
-        mail to: 'ali@onlab.us',
+        mail to: env.approvers,
             subject: "Job '${JOB_NAME}' is waiting up for promotion",
             body: "Please go to ${BUILD_URL}input and promote or abort the release"
         def metadata = input id: 'release-build', message: 'Should I perform a release?',
              parameters: [booleanParam(defaultValue: true,
              description: 'Release onos applications (assumes versions have been updated)', name: 'build_onos_apps'), 
-             string(defaultValue: 'None', description: 'Release version', name: 'release_version')], submitter: 'ash'
+             string(defaultValue: branch, description: 'Release version', name: 'release_version')], submitter: 'ash,llp,acb'
 
         if (metadata['release_version'] == 'None') {
             error 'Release version cannot be None'
@@ -72,13 +78,35 @@ node ('master') {
     
         sh returnStdout: true, script: 'git commit -a -m "JENKINS: Updating manifest"'
         sh returnStdout: true, script: 'git push origin ' + metadata['release_version']
+
+        stage 'Build and Release ONOS applications'
    
         if (metadata['build_onos_apps']) {
             checkout changelog: false, poll: false, scm: [$class: 'RepoScm', currentBranch: true, 
                 manifestBranch: env.BRANCH_NAME, manifestGroup: 'onos', 
                 manifestRepositoryUrl: 'https://gerrit.opencord.org/manifest', quiet: true]
-            sh returnStdout: true, script: 'cd onos-apps/apps && mvn -Prelease clean deploy'
+            if (env.BRANCH_NAME == 'master') {
+                sh returnStdout: true, script: 'cd onos-apps/apps && mvn clean deploy'
+            } else {
+                sh returnStdout: true, script: 'cd onos-apps/apps && mvn -Prelease clean deploy'
+            }
         }
 
+        mail to: env.recipients,
+            subject: branch + ' released',
+            replyTo: 'cord-discuss@opencord.org',
+            body: '''Hi CORD Community,
+
+                        |A new bleeding edge version of cord is available, feel free to test it. 
+                        |You can obtain it using the following commands:
+
+                        |repo init -u https://gerrit.opencord.org/manifest -b '''.stripMargin() + metadata['release_version'] + '''
+                        |repo sync
+
+                        |Have fun!
+
+                        |--
+                        |CORD Automated Release
+                    '''.stripMargin()
     }
 }
