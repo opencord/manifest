@@ -2,8 +2,8 @@ import groovy.json.JsonSlurperClassic
 
 env.IGNORE_LIST = ["All-Users"]
 
-env.approvers = 'ali@onlab.us,andy@onlab.us, llp@onlab.us'
-env.recipients = 'ali@onlab.us,andy@onlab.us, llp@onlab.us'
+env.approvers = 'ali@onlab.us,andy@onlab.us,llp@onlab.us'
+env.recipients = 'cord-dev@opencord.org'
 
 @NonCPS
 def jsonParseList(def json) {
@@ -94,7 +94,7 @@ node ('master') {
 
         mail to: env.recipients,
             subject: 'Nightly bleeding edge ' + branch + ' released',
-            replyTo: 'cord-discuss@opencord.org',
+            replyTo: 'cord-dev@opencord.org',
             body: '''Hi CORD Community,
 
                         |A new bleeding edge version of cord is available, feel free to test it. 
