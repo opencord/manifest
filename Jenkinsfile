@@ -97,7 +97,7 @@ node ('master') {
             replyTo: 'cord-discuss@opencord.org',
             body: '''Hi CORD Community,
 
-                        |A new bleeding edge version of cord is available, feel free to test it. 
+                        |A new version of cord is available, feel free to test it. 
                         |You can obtain it using the following commands:
 
                         |repo init -u https://gerrit.opencord.org/manifest -b '''.stripMargin() + metadata['release_version'] + '''
