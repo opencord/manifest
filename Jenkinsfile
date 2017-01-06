@@ -2,8 +2,8 @@ import groovy.json.JsonSlurperClassic
 
 env.IGNORE_LIST = ["All-Users"]
 
-env.approvers = 'ali@onlab.us,andy@onlab.us'
-env.recipients = 'ali@onlab.us,andy@onlab.us'
+env.approvers = 'ali@onlab.us,andy@onlab.us, llp@onlab.us'
+env.recipients = 'ali@onlab.us,andy@onlab.us, llp@onlab.us'
 
 @NonCPS
 def jsonParseList(def json) {
@@ -63,7 +63,7 @@ node ('master') {
         def metadata = input id: 'release-build', message: 'Should I perform a release?',
              parameters: [booleanParam(defaultValue: true,
              description: 'Release onos applications (assumes versions have been updated)', name: 'build_onos_apps'), 
-             string(defaultValue: branch, description: 'Release version', name: 'release_version')], submitter: 'ash'
+             string(defaultValue: branch, description: 'Release version', name: 'release_version')], submitter: 'ash,llp,acb'
 
         if (metadata['release_version'] == 'None') {
             error 'Release version cannot be None'
