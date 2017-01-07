@@ -93,7 +93,7 @@ node ('master') {
         }
 
         mail to: env.recipients,
-            subject: 'Nightly bleeding edge ' + branch + ' released',
+            subject: 'Nightly bleeding edge ' + metadata['release_version'] + ' released',
             replyTo: 'cord-dev@opencord.org',
             body: '''Hi CORD Community,
 
