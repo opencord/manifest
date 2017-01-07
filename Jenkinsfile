@@ -93,7 +93,7 @@ node ('master') {
         }
 
         mail to: env.recipients,
-            subject: branch + ' released',
+            subject: metadata['release_version'] + ' released',
             replyTo: 'cord-discuss@opencord.org',
             body: '''Hi CORD Community,
 
