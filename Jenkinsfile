@@ -3,7 +3,7 @@ import groovy.json.JsonSlurperClassic
 env.IGNORE_LIST = ["All-Users"]
 
 env.approvers = 'ali@onlab.us,andy@onlab.us,llp@onlab.us'
-env.recipients = 'cord-dev@opencord.org'
+env.recipients = 'cord-discuss@opencord.org'
 
 @NonCPS
 def jsonParseList(def json) {
@@ -57,13 +57,15 @@ node ('master') {
         branch = 'cord-' + now.format("yyyyMMddHHmm", TimeZone.getTimeZone('UTC'))
 
         stage 'Release?'
-        mail to: env.approvers,
-            subject: "Job '${JOB_NAME}' is waiting up for promotion",
-            body: "Please go to ${BUILD_URL}input and promote or abort the release"
-        def metadata = input id: 'release-build', message: 'Should I perform a release?',
-             parameters: [booleanParam(defaultValue: true,
-             description: 'Release onos applications (assumes versions have been updated)', name: 'build_onos_apps'), 
-             string(defaultValue: branch, description: 'Release version', name: 'release_version')], submitter: 'ash,llp,acb'
+        timeout(time: 12, unit: 'HOURS') {
+            mail to: env.approvers,
+                subject: "Job '${JOB_NAME}' is waiting up for promotion",
+                body: "Please go to ${BUILD_URL}input and promote or abort the release. It will timeout after 12 hours."
+            def metadata = input id: 'release-build', message: 'Should I perform a release?',
+                parameters: [booleanParam(defaultValue: true,
+                description: 'Release onos applications (assumes versions have been updated)', name: 'build_onos_apps'), 
+                string(defaultValue: branch, description: 'Release version', name: 'release_version')], submitter: 'ash,llp,acb'
+        }
 
         if (metadata['release_version'] == 'None') {
             error 'Release version cannot be None'
