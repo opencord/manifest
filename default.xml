@@ -38,6 +38,11 @@
 <project path="orchestration/xos_services/vtr" name="vtr" groups="orchestration,services"/>
 <project path="orchestration/xos_services/globalxos" name="globalxos" groups="orchestration,services"/>
 
+<project path="orchestration/xos_services/vBBU" name="vBBU" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vMME" name="vMME" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vPGWC" name="vPGWC" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vSGW" name="vSGW" groups="orchestration,services"/>
+
 <project path="orchestration/xos-gui" name="xos-gui" groups="orchestration"/>
 <project path="orchestration/xos-rest-gw" name="xos-rest-gw" groups="orchestration"/>
 <project path="orchestration/xos_libraries/ng-xos-lib" name="ng-xos-lib" groups="orchestration,libraries"/>
