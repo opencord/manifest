@@ -54,6 +54,7 @@ node ('master') {
     if (created == 0) {
 
         def now = new Date()
+        def metadata = 'None'
         branch = 'cord-' + now.format("yyyyMMddHHmm", TimeZone.getTimeZone('UTC'))
 
         stage 'Release?'
@@ -61,7 +62,7 @@ node ('master') {
             mail to: env.approvers,
                 subject: "Job '${JOB_NAME}' is waiting up for promotion",
                 body: "Please go to ${BUILD_URL}input and promote or abort the release. It will timeout after 12 hours."
-            def metadata = input id: 'release-build', message: 'Should I perform a release?',
+            metadata = input id: 'release-build', message: 'Should I perform a release?',
                 parameters: [booleanParam(defaultValue: true,
                 description: 'Release onos applications (assumes versions have been updated)', name: 'build_onos_apps'), 
                 string(defaultValue: branch, description: 'Release version', name: 'release_version')], submitter: 'ash,llp,acb'
