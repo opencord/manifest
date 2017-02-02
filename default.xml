@@ -46,6 +46,7 @@
 <project path="orchestration/xos_services/vEG" name="vEG" groups="orchestration,services"/>
 
 <project path="orchestration/xos-gui" name="xos-gui" groups="orchestration"/>
+<project path="orchestration/xos-sample-gui-extension" name="xos-sample-gui-extension" groups="orchestration"/>
 <project path="orchestration/xos-rest-gw" name="xos-rest-gw" groups="orchestration"/>
 <project path="orchestration/xos_libraries/ng-xos-lib" name="ng-xos-lib" groups="orchestration,libraries"/>
 
