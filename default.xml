@@ -42,6 +42,8 @@
 <project path="orchestration/xos_services/vMME" name="vMME" groups="orchestration,services" upstream="master"/>
 <project path="orchestration/xos_services/vPGWC" name="vPGWC" groups="orchestration,services" upstream="master"/>
 <project path="orchestration/xos_services/vSGW" name="vSGW" groups="orchestration,services" upstream="master"/>
+<project path="orchestration/xos_services/progran" name="progran" groups="orchestration,services" upstream="master"/>
+
 <project path="orchestration/xos_services/vEE" name="vEE" groups="orchestration,services" upstream="master"/>
 <project path="orchestration/xos_services/vEG" name="vEG" groups="orchestration,services" upstream="master"/>
 
