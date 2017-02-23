@@ -49,7 +49,7 @@
 
 <project path="orchestration/xos-gui" name="xos-gui" groups="orchestration" upstream="master" revision="a6487cedaf8d49cfc3294ad461452f8fc8a1089c"/>
 <project path="orchestration/xos-sample-gui-extension" name="xos-sample-gui-extension" groups="orchestration" upstream="master" revision="c1d1ffb3845acfbd0181d7c783e1791f5da5d56b"/>
-<project path="orchestration/xos-rest-gw" name="xos-rest-gw" groups="orchestration" upstream="master" revision="45182c58d7472ed69e1c9d4c16431b78c41d41ef"/>
+<project path="orchestration/xos-rest-gw" name="xos-rest-gw" groups="orchestration" upstream="master" revision="3e40ef4508ff236b6cef19d2bdf6524c40c41856"/>
 <project path="orchestration/xos_libraries/ng-xos-lib" name="ng-xos-lib" groups="orchestration,libraries" upstream="master"/>
 
 <project path="component/chameleon" name="chameleon" groups="voltha" upstream="master">
