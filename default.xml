@@ -9,7 +9,7 @@
            remote="opencord"
            sync-j="4" />
 
-<project path="build" name="cord" groups="build" upstream="master" revision="0ab868295826a0ac529d0edc057d2d35d2c4f0e3"/>
+<project path="build" name="cord" groups="build" upstream="master" revision="e0dedec213a235311189302cba59084a3cc132df"/>
 <project path="build/maas" name="maas" groups="build" upstream="master" revision="43f3cc39683134024cf02e347aa33cf2a2cbce1e"/>
 <project path="build/platform-install" name="platform-install" groups="build" upstream="master" revision="bcfb2d6317fc9b877ddfdd0efb4383113d810574"/>
 
