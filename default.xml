@@ -9,9 +9,9 @@
            remote="opencord"
            sync-j="4" />
 
-<project path="build" name="cord" groups="build" upstream="master" revision="e0dedec213a235311189302cba59084a3cc132df"/>
-<project path="build/maas" name="maas" groups="build" upstream="master" revision="43f3cc39683134024cf02e347aa33cf2a2cbce1e"/>
-<project path="build/platform-install" name="platform-install" groups="build" upstream="master" revision="bcfb2d6317fc9b877ddfdd0efb4383113d810574"/>
+<project path="build" name="cord" groups="build" upstream="master" revision="825e159e162be8cb4ad06130b7bfc70fbd6f4935"/>
+<project path="build/maas" name="maas" groups="build" upstream="master" revision="e8823060e927e4241383766148156030183a9679"/>
+<project path="build/platform-install" name="platform-install" groups="build" upstream="master" revision="8cbc1f8f0b24d6aad350b61549d84f18b418b515"/>
 
 <project path="onos-apps" name="cord-onos-publisher" groups="onos" upstream="master" revision="d7f72032d3a490f849d24d8d34c14b42dc45f08d"/>
 <project path="onos-apps/apps/aaa" name="aaa" groups="onos" upstream="master" revision="df7ff86b4610203e9093eb6349fcbb3b3a09feab"/>
