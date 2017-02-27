@@ -11,7 +11,7 @@
 
 <project path="build" name="cord" groups="build" upstream="master" revision="825e159e162be8cb4ad06130b7bfc70fbd6f4935"/>
 <project path="build/maas" name="maas" groups="build" upstream="master" revision="e8823060e927e4241383766148156030183a9679"/>
-<project path="build/platform-install" name="platform-install" groups="build" upstream="master" revision="8cbc1f8f0b24d6aad350b61549d84f18b418b515"/>
+<project path="build/platform-install" name="platform-install" groups="build" upstream="master" revision="667334f396ecdc9078b088ebbf44597818cfa3b3"/>
 
 <project path="onos-apps" name="cord-onos-publisher" groups="onos" upstream="master" revision="d7f72032d3a490f849d24d8d34c14b42dc45f08d"/>
 <project path="onos-apps/apps/aaa" name="aaa" groups="onos" upstream="master" revision="df7ff86b4610203e9093eb6349fcbb3b3a09feab"/>
@@ -24,7 +24,7 @@
 <project path="test/cord-tester" name="cord-tester" groups="test" upstream="master" revision="8915c8302d05261f6df1f6c05c861fb5c118265c"/>
 <project path="test/fabric-oftest" name="fabric-oftest" groups="test" upstream="master" revision="e7d285f4a993f731190fcc941ff44e3426ab576b"/>
 
-<project path="orchestration/xos" name="xos" groups="orchestration" upstream="master" revision="402a2b405b460ca92006c600c680fdca3cb37bbc"/>
+<project path="orchestration/xos" name="xos" groups="orchestration" upstream="master" revision="5679eaa401eeba0aec181a79a458b9e05cf576ce"/>
 <project path="orchestration/service-profile" name="service-profile" groups="orchestration" upstream="master" revision="6be96a368a7c783dd9b714bb9f1b996d867f7286"/>
 <project path="orchestration/xos_services/exampleservice" name="exampleservice" groups="orchestration,services" upstream="master" revision="974c9ce9856bc784bf5431d9112cf991315acfb4"/>
 <project path="orchestration/xos_services/fabric" name="fabric" groups="orchestration,services" upstream="master" revision="a50a0129f676f80e500e44b88c9dfa455ad08fca"/>
@@ -47,9 +47,9 @@
 <project path="orchestration/xos_services/vEE" name="vEE" groups="orchestration,services" upstream="master"/>
 <project path="orchestration/xos_services/vEG" name="vEG" groups="orchestration,services" upstream="master"/>
 
-<project path="orchestration/xos-gui" name="xos-gui" groups="orchestration" upstream="master" revision="a6487cedaf8d49cfc3294ad461452f8fc8a1089c"/>
+<project path="orchestration/xos-gui" name="xos-gui" groups="orchestration" upstream="master" revision="I45c533feba6720b82de3681d862773047e7fd6f8"/>
 <project path="orchestration/xos-sample-gui-extension" name="xos-sample-gui-extension" groups="orchestration" upstream="master" revision="c1d1ffb3845acfbd0181d7c783e1791f5da5d56b"/>
-<project path="orchestration/xos-rest-gw" name="xos-rest-gw" groups="orchestration" upstream="master" revision="45182c58d7472ed69e1c9d4c16431b78c41d41ef"/>
+<project path="orchestration/xos-rest-gw" name="xos-rest-gw" groups="orchestration" upstream="master" revision="f64cdd5329bb96bf3fc00fead707147b62a9cbe6"/>
 <project path="orchestration/xos_libraries/ng-xos-lib" name="ng-xos-lib" groups="orchestration,libraries" upstream="master"/>
 
 <project path="component/chameleon" name="chameleon" groups="voltha" upstream="master">
