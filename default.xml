@@ -24,7 +24,7 @@
 <project path="test/cord-tester" name="cord-tester" groups="test" upstream="master" revision="8915c8302d05261f6df1f6c05c861fb5c118265c"/>
 <project path="test/fabric-oftest" name="fabric-oftest" groups="test" upstream="master" revision="e7d285f4a993f731190fcc941ff44e3426ab576b"/>
 
-<project path="orchestration/xos" name="xos" groups="orchestration" upstream="master" revision="5679eaa401eeba0aec181a79a458b9e05cf576ce"/>
+<project path="orchestration/xos" name="xos" groups="orchestration" upstream="master" revision="c2a4da2ccaa12360b2718be303b247866aefdfe6"/>
 <project path="orchestration/service-profile" name="service-profile" groups="orchestration" upstream="master" revision="6be96a368a7c783dd9b714bb9f1b996d867f7286"/>
 <project path="orchestration/xos_services/exampleservice" name="exampleservice" groups="orchestration,services" upstream="master" revision="974c9ce9856bc784bf5431d9112cf991315acfb4"/>
 <project path="orchestration/xos_services/fabric" name="fabric" groups="orchestration,services" upstream="master" revision="a50a0129f676f80e500e44b88c9dfa455ad08fca"/>
