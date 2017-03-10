@@ -47,7 +47,7 @@
 <project path="orchestration/xos_services/vEE" name="vEE" groups="orchestration,services" upstream="master"/>
 <project path="orchestration/xos_services/vEG" name="vEG" groups="orchestration,services" upstream="master"/>
 
-<project path="orchestration/xos-gui" name="xos-gui" groups="orchestration" upstream="master" revision="ebe5a2213b1c1e739b0118c3a8ec1cc5b4ad27a1"/>
+<project path="orchestration/xos-gui" name="xos-gui" groups="orchestration" upstream="master"/>
 <project path="orchestration/xos-sample-gui-extension" name="xos-sample-gui-extension" groups="orchestration" upstream="master" revision="c1d1ffb3845acfbd0181d7c783e1791f5da5d56b"/>
 <project path="orchestration/xos-rest-gw" name="xos-rest-gw" groups="orchestration" upstream="master" revision="f64cdd5329bb96bf3fc00fead707147b62a9cbe6"/>
 <project path="orchestration/xos_libraries/ng-xos-lib" name="ng-xos-lib" groups="orchestration,libraries" upstream="master"/>
