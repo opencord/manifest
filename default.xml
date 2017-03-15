@@ -25,7 +25,6 @@
 <project path="test/fabric-oftest" name="fabric-oftest" groups="test"/>
 
 <project path="orchestration/xos" name="xos" groups="orchestration"/>
-<project path="orchestration/service-profile" name="service-profile" groups="orchestration"/>
 <project path="orchestration/xos_services/exampleservice" name="exampleservice" groups="orchestration,services"/>
 <project path="orchestration/xos_services/fabric" name="fabric" groups="orchestration,services"/>
 <project path="orchestration/xos_services/hypercache" name="hypercache" groups="orchestration,services"/>
@@ -49,6 +48,9 @@
 <project path="orchestration/xos_services/metronet-local" name="metronet-local" groups="orchestration,services" upstream="master"/>
 
 <project path="orchestration/profiles/rcord" name="rcord" groups="orchestration,profiles"/> 
+<project path="orchestration/profiles/ecord" name="ecord" groups="orchestration,profiles"/> 
+<project path="orchestration/profiles/mcord" name="mcord" groups="orchestration,profiles"/> 
+<project path="orchestration/profiles/opencloud" name="opencloud" groups="orchestration,profiles"/> 
 
 <project path="orchestration/xos-gui" name="xos-gui" groups="orchestration"/>
 <project path="orchestration/xos-sample-gui-extension" name="xos-sample-gui-extension" groups="orchestration"/>
