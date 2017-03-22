@@ -11,7 +11,7 @@
 
 <project path="build" name="cord" groups="build" upstream="master" revision="825e159e162be8cb4ad06130b7bfc70fbd6f4935"/>
 <project path="build/maas" name="maas" groups="build" upstream="master" revision="e8823060e927e4241383766148156030183a9679"/>
-<project path="build/platform-install" name="platform-install" groups="build" upstream="master" revision="75d67c23a766dbf035a87bfb248c448dd1951fb5"/>
+<project path="build/platform-install" name="platform-install" groups="build" upstream="master" revision="e078455f6c2070c5295cbd78aacf24aff756d189"/>
 
 <project path="onos-apps" name="cord-onos-publisher" groups="onos" upstream="master" revision="d7f72032d3a490f849d24d8d34c14b42dc45f08d"/>
 <project path="onos-apps/apps/aaa" name="aaa" groups="onos" upstream="master" revision="df7ff86b4610203e9093eb6349fcbb3b3a09feab"/>
