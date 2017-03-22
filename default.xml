@@ -26,7 +26,6 @@
 
 
 <project path="orchestration/xos" name="xos" groups="orchestration" upstream="master" revision="979f920ea1b8bf269024fdb997e9cd244d1485a5"/>
-<project path="orchestration/service-profile" name="service-profile" groups="orchestration" upstream="master" revision="6be96a368a7c783dd9b714bb9f1b996d867f7286"/>
 <project path="orchestration/xos_services/exampleservice" name="exampleservice" groups="orchestration,services" upstream="master" revision="974c9ce9856bc784bf5431d9112cf991315acfb4"/>
 <project path="orchestration/xos_services/fabric" name="fabric" groups="orchestration,services" upstream="master" revision="a50a0129f676f80e500e44b88c9dfa455ad08fca"/>
 <project path="orchestration/xos_services/hypercache" name="hypercache" groups="orchestration,services" upstream="master" revision="b747a127943f8be566507acf66e339ec3ddedbb8"/>
@@ -47,6 +46,11 @@
 <project path="orchestration/xos_services/metronet-local" name="metronet-local" groups="orchestration,services" upstream="master"/>
 <project path="orchestration/xos_services/vEE" name="vEE" groups="orchestration,services" upstream="master"/>
 <project path="orchestration/xos_services/vEG" name="vEG" groups="orchestration,services" upstream="master"/>
+
+<project path="orchestration/profiles/rcord" name="rcord" groups="orchestration,profiles"/> 
+<project path="orchestration/profiles/ecord" name="ecord" groups="orchestration,profiles"/> 
+<project path="orchestration/profiles/mcord" name="mcord" groups="orchestration,profiles"/> 
+<project path="orchestration/profiles/opencloud" name="opencloud" groups="orchestration,profiles"/>
 
 <project path="orchestration/xos-gui" name="xos-gui" groups="orchestration" upstream="master" revision="265c204254a062701f8848be2ce4e328e0ca09e6"/>
 <project path="orchestration/xos-sample-gui-extension" name="xos-sample-gui-extension" groups="orchestration" upstream="master" revision="c1d1ffb3845acfbd0181d7c783e1791f5da5d56b"/>
