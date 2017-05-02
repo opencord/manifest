@@ -46,6 +46,7 @@
 <project path="orchestration/xos_services/vEG" name="vEG" groups="orchestration,services"/>
 <project path="orchestration/xos_services/metro-net" name="metro-net" groups="orchestration,services"/>
 <project path="orchestration/xos_services/metronet-local" name="metronet-local" groups="orchestration,services" upstream="master"/>
+<project path="onos-apps/apps/carrierethernet" name="carrierethernet" groups="onos" upstream="master"/>
 
 <project path="orchestration/profiles/rcord" name="rcord" groups="orchestration,profiles"/> 
 <project path="orchestration/profiles/ecord" name="ecord" groups="orchestration,profiles"/> 
