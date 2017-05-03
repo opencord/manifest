@@ -1,4 +1,4 @@
-import groovy.json.JsonSlurperClassic 
+import groovy.json.JsonSlurperClassic
 
 env.IGNORE_LIST = ["All-Users"]
 
@@ -24,7 +24,11 @@ def jsonParseMap(def json) {
 
 def createBranch(def proj, def branch, def parent) {
     cmd = 'ssh -p 29418 gerrit.opencord.org gerrit create-branch ' + proj + " " + branch + " " + parent
-    sh returnStdout: true, script: cmd 
+    sh returnStdout: true, script: cmd
+}
+
+def validateXMLwithDTD() {
+    sh returnStdout: true, script 'validate_manifest.sh'
 }
 
 int checkBranchExists(def proj) {
@@ -41,6 +45,9 @@ int checkBranchExists(def proj) {
 }
 
 node ('master') {
+
+    stage 'Validate default.xml with DTD'
+    validateXMLwithDTD()
 
     stage 'Check and create support branches'
     def url = 'https://gerrit.opencord.org/projects/?type=CODE'
@@ -64,7 +71,7 @@ node ('master') {
                 body: "Please go to ${BUILD_URL}input and promote or abort the release. It will timeout after 12 hours."
             metadata = input id: 'release-build', message: 'Should I perform a release?',
                 parameters: [booleanParam(defaultValue: true,
-                description: 'Release onos applications (assumes versions have been updated)', name: 'build_onos_apps'), 
+                description: 'Release onos applications (assumes versions have been updated)', name: 'build_onos_apps'),
                 string(defaultValue: branch, description: 'Release version', name: 'release_version')], submitter: 'ash,llp,acb'
         }
 
@@ -77,16 +84,16 @@ node ('master') {
         checkout changelog: false, poll: false, scm: [$class: 'GitSCM', branches: [[name: metadata['release_version'] ]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'WipeWorkspace'], [$class: 'CleanBeforeCheckout']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'dd9d4677-2415-4f82-8e79-99dcd530f023', url: 'ssh://jenkins@gerrit.opencord.org:29418/manifest']]]
         sh returnStdout: true, script: 'git checkout ' + metadata['release_version']
         sh returnStdout: true, script: 'git pull origin ' + metadata['release_version']
-        sh returnStdout: true, script: 'cp ' + env.JENKINS_HOME + '/tmp/manifest-' + env.BRANCH_NAME + '.xml default.xml' 
-    
+        sh returnStdout: true, script: 'cp ' + env.JENKINS_HOME + '/tmp/manifest-' + env.BRANCH_NAME + '.xml default.xml'
+
         sh returnStdout: true, script: 'git commit -a -m "JENKINS: Updating manifest"'
         sh returnStdout: true, script: 'git push origin ' + metadata['release_version']
 
         stage 'Build and Release ONOS applications'
-   
+
         if (metadata['build_onos_apps']) {
-            checkout changelog: false, poll: false, scm: [$class: 'RepoScm', currentBranch: true, 
-                manifestBranch: env.BRANCH_NAME, manifestGroup: 'onos', 
+            checkout changelog: false, poll: false, scm: [$class: 'RepoScm', currentBranch: true,
+                manifestBranch: env.BRANCH_NAME, manifestGroup: 'onos',
                 manifestRepositoryUrl: 'https://gerrit.opencord.org/manifest', quiet: true]
             if (env.BRANCH_NAME == 'master') {
                 sh returnStdout: true, script: 'cd onos-apps/apps && mvn clean deploy'
@@ -100,7 +107,7 @@ node ('master') {
             replyTo: 'cord-dev@opencord.org',
             body: '''Hi CORD Community,
 
-                        |A new bleeding edge version of cord is available, feel free to test it. 
+                        |A new bleeding edge version of cord is available, feel free to test it.
                         |You can obtain it using the following commands:
 
                         |repo init -u https://gerrit.opencord.org/manifest -b '''.stripMargin() + metadata['release_version'] + '''
