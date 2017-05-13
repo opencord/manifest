@@ -1,65 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-  <remote  name="opencord"
-           fetch=".."
-           review="https://gerrit.opencord.org/"
-           revision="cord-3.0" />
-  <default revision="cord-3.0"
-           remote="opencord"
-           sync-j="4" />
-
-<project path="build" name="cord" groups="build"/>
-<project path="build/maas" name="maas" groups="build"/>
-<project path="build/platform-install" name="platform-install" groups="build"/>
-
-<project path="onos-apps" name="cord-onos-publisher" groups="onos"/>
-<project path="onos-apps/apps/aaa" name="aaa" groups="onos"/>
-<project path="onos-apps/apps/config" name="config" groups="onos"/>
-<project path="onos-apps/apps/igmp" name="igmp" groups="onos"/>
-<project path="onos-apps/apps/mcast" name="mcast" groups="onos"/>
-<project path="onos-apps/apps/olt" name="olt" groups="onos"/>
-<project path="onos-apps/apps/vtn" name="vtn" groups="onos"/>
-
-<project path="test/cord-tester" name="cord-tester" groups="test"/>
-<project path="test/fabric-oftest" name="fabric-oftest" groups="test"/>
-
-<project path="orchestration/xos" name="xos" groups="orchestration"/>
-<project path="orchestration/xos_services/exampleservice" name="exampleservice" groups="orchestration,services"/>
-<project path="orchestration/xos_services/fabric" name="fabric" groups="orchestration,services"/>
-<project path="orchestration/xos_services/hypercache" name="hypercache" groups="orchestration,services"/>
-<project path="orchestration/xos_services/monitoring" name="monitoring" groups="orchestration,services"/>
-<project path="orchestration/xos_services/onos-service" name="onos-service" groups="orchestration,services"/>
-<project path="orchestration/xos_services/openstack" name="openstack" groups="orchestration,services"/>
-<project path="orchestration/xos_services/vrouter" name="vrouter" groups="orchestration,services"/>
-<project path="orchestration/xos_services/vsg" name="vsg" groups="orchestration,services"/>
-<project path="orchestration/xos_services/vtr" name="vtr" groups="orchestration,services"/>
-<project path="orchestration/xos_services/globalxos" name="globalxos" groups="orchestration,services"/>
-
-<project path="orchestration/xos_services/vBBU" name="vBBU" groups="orchestration,services"/>
-<project path="orchestration/xos_services/vMME" name="vMME" groups="orchestration,services"/>
-<project path="orchestration/xos_services/vPGWC" name="vPGWC" groups="orchestration,services"/>
-<project path="orchestration/xos_services/vSGW" name="vSGW" groups="orchestration,services"/>
-<project path="orchestration/xos_services/progran" name="progran" groups="orchestration,services"/>
-
-<project path="orchestration/xos_services/vEE" name="vEE" groups="orchestration,services"/>
-<project path="orchestration/xos_services/vEG" name="vEG" groups="orchestration,services"/>
-<project path="orchestration/xos_services/metro-net" name="metro-net" groups="orchestration,services"/>
-<project path="orchestration/xos_services/metronet-local" name="metronet-local" groups="orchestration,services" upstream="master"/>
-
-<project path="orchestration/profiles/rcord" name="rcord" groups="orchestration,profiles"/> 
-<project path="orchestration/profiles/ecord" name="ecord" groups="orchestration,profiles"/> 
-<project path="orchestration/profiles/mcord" name="mcord" groups="orchestration,profiles"/> 
-<project path="orchestration/profiles/opencloud" name="opencloud" groups="orchestration,profiles"/> 
-
-<project path="orchestration/xos-gui" name="xos-gui" groups="orchestration"/>
-<project path="orchestration/xos-sample-gui-extension" name="xos-sample-gui-extension" groups="orchestration"/>
-<project path="orchestration/xos-rest-gw" name="xos-rest-gw" groups="orchestration"/>
-<project path="orchestration/xos_libraries/ng-xos-lib" name="ng-xos-lib" groups="orchestration,libraries"/>
-
-<project path="component/chameleon" name="chameleon" groups="voltha">
-    <linkfile src="." dest="incubator/voltha/chameleon"/>
-</project>
-<project path="incubator/voltha" name="voltha" groups="incubation,voltha"/>
-
+  <remote fetch=".." name="opencord" review="https://gerrit.opencord.org/" revision="cord-3.0"/>
+  
+  <default remote="opencord" revision="cord-3.0" sync-j="4"/>
+  
+  <project groups="onos" name="aaa" path="onos-apps/apps/aaa" revision="1fe3b0e5e7eafd7809fdded0f9021a3f316df824" upstream="cord-3.0"/>
+  <project groups="voltha" name="chameleon" path="component/chameleon" revision="e46128f45225dc8b97af085bfe81218650bdb66b" upstream="cord-3.0">
+    <linkfile dest="incubator/voltha/chameleon" src="."/>
+  </project>
+  <project groups="onos" name="config" path="onos-apps/apps/config" revision="924318ee29e58921392d02086c2c3980e467d23d" upstream="cord-3.0"/>
+  <project groups="build" name="cord" path="build" revision="03f2b4599c96171ef4db98ba6cbdf7a4fa2c7b3f" upstream="cord-3.0"/>
+  <project groups="onos" name="cord-onos-publisher" path="onos-apps" revision="0bf710f2cf8b3f3ff6fd57c5860264f895bbfcb0" upstream="cord-3.0"/>
+  <project groups="test" name="cord-tester" path="test/cord-tester" revision="f6a9f39de8e3cf5834c04c213394fe68c49d2ec3" upstream="cord-3.0"/>
+  <project groups="orchestration,profiles" name="ecord" path="orchestration/profiles/ecord" revision="859de52e69c5a451969bf630af5e33f9e18b9847" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="exampleservice" path="orchestration/xos_services/exampleservice" revision="2e6bfe3ae5d15bde937644dd913bccae6858189c" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="fabric" path="orchestration/xos_services/fabric" revision="af8b4342ce68f7fc1a15e8659b979f6bc22da1a3" upstream="cord-3.0"/>
+  <project groups="test" name="fabric-oftest" path="test/fabric-oftest" revision="15c2c268b51429b55f3bec95885aff5f00140099" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="globalxos" path="orchestration/xos_services/globalxos" revision="a6ae7d63cc4f59394bda31a247bd551b5925f842" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="hypercache" path="orchestration/xos_services/hypercache" revision="b747a127943f8be566507acf66e339ec3ddedbb8" upstream="cord-3.0"/>
+  <project groups="onos" name="igmp" path="onos-apps/apps/igmp" revision="4fbdc25530673b28d81e9a8dbb23851c02bfc351" upstream="cord-3.0"/>
+  <project groups="build" name="maas" path="build/maas" revision="87c7ec1d5245b97f69c3a36f1fd429465b9f5244" upstream="cord-3.0"/>
+  <project groups="onos" name="mcast" path="onos-apps/apps/mcast" revision="d851dcec467e58e9051b4eb2460c3233565e0095" upstream="cord-3.0"/>
+  <project groups="orchestration,profiles" name="mcord" path="orchestration/profiles/mcord" revision="2f5612d526cb73d91c45facf1447ff508517a11e" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="metro-net" path="orchestration/xos_services/metro-net" revision="ade8848da0f0d4fdb4c62836bd8060ddd72f1848" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="metronet-local" path="orchestration/xos_services/metronet-local" revision="f6e2ed19d949f76523bc657d36db979ae2050834" upstream="master"/>
+  <project groups="orchestration,services" name="monitoring" path="orchestration/xos_services/monitoring" revision="975d157680f31f1a000fe8ad8e556e7dfe1eb06d" upstream="cord-3.0"/>
+  <project groups="orchestration,libraries" name="ng-xos-lib" path="orchestration/xos_libraries/ng-xos-lib" revision="b4b1751dc113bb8f40c625f7439e0be7a064506f" upstream="cord-3.0"/>
+  <project groups="onos" name="olt" path="onos-apps/apps/olt" revision="c15556d29d108cc2bf5d6cf7a6736fe485202b86" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="onos-service" path="orchestration/xos_services/onos-service" revision="e73328a9a1082f0b50630689a571a319903ef5e3" upstream="cord-3.0"/>
+  <project groups="orchestration,profiles" name="opencloud" path="orchestration/profiles/opencloud" revision="ccf5c9bb6756817a3b9f96688a0e306514262ec5" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="openstack" path="orchestration/xos_services/openstack" revision="96fd574013911b99ea193e8c305256dd785bc2f0" upstream="cord-3.0"/>
+  <project groups="build" name="platform-install" path="build/platform-install" revision="5b081f5dfe8520604b4e51bce3fb305c42fcc135" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="progran" path="orchestration/xos_services/progran" revision="b224cc9b497b4214c39042318adf234646de9161" upstream="cord-3.0"/>
+  <project groups="orchestration,profiles" name="rcord" path="orchestration/profiles/rcord" revision="4eb615b1024d156affcf7d4f22c276b14758a865" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="vBBU" path="orchestration/xos_services/vBBU" revision="740468e8ef36b22fddf3154eee72450d58c60367" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="vEE" path="orchestration/xos_services/vEE" revision="f6558717bbbed5f0f30b4e0b3880fed5662322ad" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="vEG" path="orchestration/xos_services/vEG" revision="9899802fee763d5b726ae3d6a9df3bd9438d121b" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="vMME" path="orchestration/xos_services/vMME" revision="fda62d4fce426a6df88b96a66f03cda2cda5222b" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="vPGWC" path="orchestration/xos_services/vPGWC" revision="39d5a8b064d435bd6c45ee2b581c4bc8b162bc65" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="vSGW" path="orchestration/xos_services/vSGW" revision="759c7048a44641f16ae3eb33d3970548c86c419c" upstream="cord-3.0"/>
+  <project groups="incubation,voltha" name="voltha" path="incubator/voltha" revision="b2ff5a609ee897a25cf4e725ab4b8f1d75d76b54" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="vrouter" path="orchestration/xos_services/vrouter" revision="900187ad0ccb924706e9f0f837fa07f66cfbf6bb" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="vsg" path="orchestration/xos_services/vsg" revision="37f71e387e523437bb87d8d362b3a9fce1bb1c01" upstream="cord-3.0"/>
+  <project groups="onos" name="vtn" path="onos-apps/apps/vtn" revision="7c72a55f49d05ca29b9f68cc3424561a9cbc7c26" upstream="cord-3.0"/>
+  <project groups="orchestration,services" name="vtr" path="orchestration/xos_services/vtr" revision="bba581a4455151e4b50d1adfe57b3f889d3c7ad1" upstream="cord-3.0"/>
+  <project groups="orchestration" name="xos" path="orchestration/xos" revision="96de1410b999579b33ffc8c5f1606dc0c815fee4" upstream="cord-3.0"/>
+  <project groups="orchestration" name="xos-gui" path="orchestration/xos-gui" revision="a338531beb36751719f90d15a44b4ac4be8b0f33" upstream="cord-3.0"/>
+  <project groups="orchestration" name="xos-rest-gw" path="orchestration/xos-rest-gw" revision="4d4d94704db2c8f8517ae2d4a5fbcec13c30461d" upstream="cord-3.0"/>
+  <project groups="orchestration" name="xos-sample-gui-extension" path="orchestration/xos-sample-gui-extension" revision="28171f965506e945443047f7408e13c809dfe9e1" upstream="cord-3.0"/>
 </manifest>
