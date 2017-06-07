@@ -25,7 +25,7 @@
 <project path="test/fabric-oftest" name="fabric-oftest" groups="test" upstream="3.0"/>
 
 
-<project path="orchestration/xos" name="xos" groups="orchestration" upstream="master" revision="e38ecdca26be56904086367d3a537c25a03c0729"/>
+<project path="orchestration/xos" name="xos" groups="orchestration" upstream="master" revision="7d9e8b00c4daf11f65d6f5edc3e22d6c96eec1d0"/>
 <project path="orchestration/xos_services/exampleservice" name="exampleservice" groups="orchestration,services" upstream="3.0"/>
 <project path="orchestration/xos_services/fabric" name="fabric" groups="orchestration,services" upstream="3.0"/>
 <project path="orchestration/xos_services/hypercache" name="hypercache" groups="orchestration,services" upstream="3.0"/>
