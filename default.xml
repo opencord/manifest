@@ -41,6 +41,7 @@
 <project path="orchestration/xos_services/vPGWC" name="vPGWC" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vSGW" name="vSGW" groups="orchestration,services"/>
 <project path="orchestration/xos_services/progran" name="progran" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vHSS" name="vHSS" groups="orchestration,services"/>
 
 <project path="orchestration/xos_services/vEE" name="vEE" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vEG" name="vEG" groups="orchestration,services"/>
