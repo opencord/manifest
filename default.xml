@@ -36,12 +36,12 @@
 <project path="orchestration/xos_services/vtr" name="vtr" groups="orchestration,services"/>
 <project path="orchestration/xos_services/globalxos" name="globalxos" groups="orchestration,services"/>
 
-<project path="orchestration/xos_services/vBBU" name="vBBU" groups="orchestration,services"/>
-<project path="orchestration/xos_services/vMME" name="vMME" groups="orchestration,services"/>
-<project path="orchestration/xos_services/vPGWC" name="vPGWC" groups="orchestration,services"/>
-<project path="orchestration/xos_services/vSGW" name="vSGW" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vbbu" name="vBBU" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vmme" name="vMME" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vpgwc" name="vPGWC" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vsgw" name="vSGW" groups="orchestration,services"/>
 <project path="orchestration/xos_services/progran" name="progran" groups="orchestration,services"/>
-<project path="orchestration/xos_services/vHSS" name="vHSS" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vhss" name="vHSS" groups="orchestration,services"/>
 
 <project path="orchestration/xos_services/vEE" name="vEE" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vEG" name="vEG" groups="orchestration,services"/>
