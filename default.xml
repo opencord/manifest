@@ -17,6 +17,7 @@
 <project path="onos-apps/apps/aaa" name="aaa" groups="onos"/>
 <project path="onos-apps/apps/config" name="config" groups="onos"/>
 <project path="onos-apps/apps/igmp" name="igmp" groups="onos"/>
+<project path="onos-apps/apps/igmpproxy" name="igmpproxy" groups="onos"/>
 <project path="onos-apps/apps/mcast" name="mcast" groups="onos"/>
 <project path="onos-apps/apps/olt" name="olt" groups="onos"/>
 <project path="onos-apps/apps/vtn" name="vtn" groups="onos"/>
