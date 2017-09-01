@@ -27,10 +27,6 @@ def createBranch(def proj, def branch, def parent) {
     sh returnStdout: true, script: cmd
 }
 
-def validateXMLwithDTD() {
-    sh returnStdout: true, script: env.WORKSPACE + '/validate_manifest.sh'
-}
-
 int checkBranchExists(def proj) {
     if (env.IGNORE_LIST.contains(proj)) {
         return 0
@@ -45,9 +41,6 @@ int checkBranchExists(def proj) {
 }
 
 node ('master') {
-
-    stage 'Validate default.xml with DTD'
-    validateXMLwithDTD()
 
     stage 'Check and create support branches'
     def url = 'https://gerrit.opencord.org/projects/?type=CODE'
