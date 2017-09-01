@@ -1,6 +1,6 @@
 import groovy.json.JsonSlurperClassic
 
-env.IGNORE_LIST = ["aaa","config","dhcpl2relay","igmp","igmpproxy","mcast","olt","vtn","sadis","voltha"]
+env.IGNORE_LIST = ["All-Users","aaa","config","dhcpl2relay","igmp","igmpproxy","mcast","olt","vtn","sadis","voltha"]
 
 env.approvers = 'ali@onlab.us,andy@onlab.us,llp@onlab.us'
 env.recipients = 'cord-discuss@opencord.org'
