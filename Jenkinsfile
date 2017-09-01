@@ -28,7 +28,7 @@ def createBranch(def proj, def branch, def parent) {
 }
 
 def validateXMLwithDTD() {
-    sh returnStdout: true, script: 'validate_manifest.sh'
+    sh returnStdout: true, script: './validate_manifest.sh'
 }
 
 int checkBranchExists(def proj) {
