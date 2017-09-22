@@ -2,7 +2,7 @@ import groovy.json.JsonSlurperClassic
 
 env.IGNORE_LIST = ["All-Users","aaa","config","dhcpl2relay","igmp","igmpproxy","mcast","olt","vtn","sadis","voltha"]
 
-env.approvers = 'ali@onlab.us,andy@onlab.us,llp@onlab.us'
+env.approvers = 'andy@opennetworking.org,llp@opennetworking.org'
 env.recipients = 'cord-discuss@opencord.org'
 
 @NonCPS
@@ -65,7 +65,7 @@ node ('master') {
             metadata = input id: 'release-build', message: 'Should I perform a release?',
                 parameters: [booleanParam(defaultValue: true,
                 description: 'Release onos applications (assumes versions have been updated)', name: 'build_onos_apps'),
-                string(defaultValue: branch, description: 'Release version', name: 'release_version')], submitter: 'ash,llp,acb'
+                string(defaultValue: branch, description: 'Release version', name: 'release_version')], submitter: 'llp,acb'
         }
 
         if (metadata['release_version'] == 'None') {
