@@ -34,7 +34,7 @@ int checkBranchExists(def proj) {
     url = 'https://gerrit.opencord.org/projects/' + proj + '/branches/' + env.BRANCH_NAME
     response = httpRequest url: url, validResponseCodes: '200,404'
     if (response.status == 404) {
-        createBranch(proj, env.BRANCH_NAME, 'master')
+        createBranch(proj, env.BRANCH_NAME, 'cord-4.0')
         return 1
     }
     return 0
