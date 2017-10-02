@@ -4,8 +4,8 @@
   <remote  name="opencord"
            fetch=".."
            review="https://gerrit.opencord.org/"
-           revision="cord-4.0" />
-  <default revision="cord-4.0"
+           revision="cord-4.1" />
+  <default revision="cord-4.1"
            remote="opencord"
            sync-j="4" />
 
