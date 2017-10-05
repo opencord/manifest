@@ -50,6 +50,7 @@
 <project path="orchestration/xos_services/vhss" name="vHSS" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vmm" name="vMM" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vsm" name="vSM" groups="orchestration,services"/>
+<project path="orchestration/xos_services/venb" name="venb" groups="orchestration,services"/>
 
 <project path="orchestration/xos_services/vEE" name="vEE" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vEG" name="vEG" groups="orchestration,services"/>
