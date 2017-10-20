@@ -44,7 +44,6 @@
 <project path="orchestration/xos_services/venb" name="venb" groups="orchestration,services"/>
 <project path="orchestration/xos_services/internetemulator" name="internetemulator" groups="orchestration,services"/>
 <project path="orchestration/xos_services/sdn-controller" name="sdn-controller" groups="orchestration,services"/>
-<project path="orchestration/xos_services/venb" name="venb" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vspgwc" name="vspgwc" groups="orchestration,services"/>
 
 <project path="orchestration/xos_services/vEE" name="vEE" groups="orchestration,services"/>
