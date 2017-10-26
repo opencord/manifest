@@ -21,6 +21,7 @@
 <project path="orchestration/xos" name="xos" groups="orchestration"/>
 <project path="orchestration/xos_services/addressmanager" name="addressmanager" groups="orchestration,services"/>
 <project path="orchestration/xos_services/exampleservice" name="exampleservice" groups="orchestration,services"/>
+<project path="orchestration/xos_services/templateservice" name="templateservice" groups="orchestration,services"/>
 <project path="orchestration/xos_services/fabric" name="fabric" groups="orchestration,services"/>
 <project path="orchestration/xos_services/hypercache" name="hypercache" groups="orchestration,services"/>
 <project path="orchestration/xos_services/monitoring" name="monitoring" groups="orchestration,services"/>
