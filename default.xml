@@ -49,6 +49,7 @@
 <project path="orchestration/xos_services/vsgw" name="vSGW" groups="orchestration,services"/>
 <project path="orchestration/xos_services/progran" name="progran" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vhss" name="vHSS" groups="orchestration,services"/>
+<project path="orchestration/xos_services/hss_db" name="hss_db" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vmm" name="vMM" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vsm" name="vSM" groups="orchestration,services"/>
 <project path="orchestration/xos_services/venb" name="venb" groups="orchestration,services"/>
