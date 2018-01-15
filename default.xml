@@ -4,8 +4,8 @@
   <remote  name="opencord"
            fetch=".."
            review="https://gerrit.opencord.org/"
-           revision="master" />
-  <default revision="master"
+           revision="voltha-1.3" />
+  <default revision="voltha-1.3"
            remote="opencord"
            sync-j="4" />
 
