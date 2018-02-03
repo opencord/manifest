@@ -14,15 +14,6 @@
 <project path="build/platform-install" name="platform-install" groups="build"/>
 
 <project path="onos-apps" name="cord-onos-publisher" groups="onos"/>
-<project path="onos-apps/apps/aaa" name="aaa" groups="onos"/>
-<project path="onos-apps/apps/config" name="config" groups="onos"/>
-<project path="onos-apps/apps/dhcpl2relay" name="dhcpl2relay" groups="onos"/>
-<project path="onos-apps/apps/igmp" name="igmp" groups="onos"/>
-<project path="onos-apps/apps/igmpproxy" name="igmpproxy" groups="onos"/>
-<project path="onos-apps/apps/mcast" name="mcast" groups="onos"/>
-<project path="onos-apps/apps/olt" name="olt" groups="onos"/>
-<project path="onos-apps/apps/vtn" name="vtn" groups="onos"/>
-<project path="onos-apps/apps/sadis" name="sadis" groups="onos"/>
 
 <project path="test/cord-tester" name="cord-tester" groups="test"/>
 <project path="test/fabric-oftest" name="fabric-oftest" groups="test"/>
@@ -78,6 +69,5 @@
 <project path="component/chameleon" name="chameleon" groups="voltha">
     <linkfile src="." dest="incubator/voltha/chameleon"/>
 </project>
-<project path="incubator/voltha" name="voltha" groups="incubation,voltha"/>
 
 </manifest>
