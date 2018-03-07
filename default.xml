@@ -62,7 +62,6 @@
 
 <project path="orchestration/xos_services/vEE" name="vEE" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vEG" name="vEG" groups="orchestration,services"/>
-<project path="orchestration/xos_services/metronet-local" name="metronet-local" groups="orchestration,services" upstream="master"/>
 <project path="onos-apps/apps/carrierethernet" name="carrierethernet" groups="onos" upstream="master"/>
 <project path="orchestration/xos_services/vnaas" name="vnaas" groups="orchestration,services"/>
 
