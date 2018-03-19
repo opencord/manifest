@@ -39,6 +39,7 @@
 <project path="orchestration/xos_services/openstack" name="openstack" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vrouter" name="vrouter" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vsg" name="vsg" groups="orchestration,services"/>
+<project path="orchestration/xos_services/vsg-hw" name="vsg-hw" groups="orchestration,services"/>
 <project path="orchestration/xos_services/vtr" name="vtr" groups="orchestration,services"/>
 <project path="orchestration/xos_services/globalxos" name="globalxos" groups="orchestration,services"/>
 <project path="orchestration/xos_services/olt-service" name="olt-service" groups="orchestration,services"/>
