@@ -34,6 +34,7 @@
 <project path="orchestration/xos_services/templateservice" name="templateservice" groups="orchestration,services"/>
 <project path="orchestration/xos_services/fabric" name="fabric" groups="orchestration,services"/>
 <project path="orchestration/xos_services/hypercache" name="hypercache" groups="orchestration,services"/>
+<project path="orchestration/xos_services/kubernetes-service" name="kubernetes-service" groups="orchestration,services"/>
 <project path="orchestration/xos_services/monitoring" name="monitoring" groups="orchestration,services"/>
 <project path="orchestration/xos_services/onos-service" name="onos-service" groups="orchestration,services"/>
 <project path="orchestration/xos_services/openstack" name="openstack" groups="orchestration,services"/>
