@@ -30,7 +30,6 @@
 
 <project path="orchestration/xos" name="xos" groups="orchestration"/>
 <project path="orchestration/xos_services/addressmanager" name="addressmanager" groups="orchestration,services"/>
-<project path="orchestration/xos_services/exampleservice" name="exampleservice" groups="orchestration,services"/>
 <project path="orchestration/xos_services/templateservice" name="templateservice" groups="orchestration,services"/>
 <project path="orchestration/xos_services/fabric" name="fabric" groups="orchestration,services"/>
 <project path="orchestration/xos_services/hypercache" name="hypercache" groups="orchestration,services"/>
@@ -66,6 +65,9 @@
 <project path="orchestration/xos_services/vEG" name="vEG" groups="orchestration,services"/>
 <project path="onos-apps/apps/carrierethernet" name="carrierethernet" groups="onos" upstream="master"/>
 <project path="orchestration/xos_services/vnaas" name="vnaas" groups="orchestration,services"/>
+
+<project path="orchestration/xos_services/exampleservice" name="exampleservice" groups="orchestration,services"/>
+<project path="orchestration/xos_services/simpleexampleservice" name="simpleexampleservice" groups="orchestration,services"/>
 
 <project path="orchestration/profiles/rcord" name="rcord" groups="orchestration,profiles"/> 
 <project path="orchestration/profiles/ecord" name="ecord" groups="orchestration,profiles"/> 
