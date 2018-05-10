@@ -9,8 +9,11 @@
            remote="opencord"
            sync-j="4" />
 
+<project path="helm-charts" name="helm-charts" groups="build"/>
+<project path="automation-tools" name="automation-tools" groups="build"/>
+<project path="docs" name="docs" groups="build"/>
+
 <project path="build" name="cord" groups="build"/>
-<project path="build/helm-charts" name="helm-charts" groups="build"/>
 <project path="build/maas" name="maas" groups="build"/>
 <project path="build/platform-install" name="platform-install" groups="build"/>
 
