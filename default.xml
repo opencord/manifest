@@ -9,9 +9,9 @@
            remote="opencord"
            sync-j="4" />
 
-<project path="helm-charts" name="helm-charts" groups="build"/>
-<project path="automation-tools" name="automation-tools" groups="build"/>
-<project path="docs" name="docs" groups="build"/>
+<project path="helm-charts" name="helm-charts" revision="cord-6.0" groups="build"/>
+<project path="automation-tools" name="automation-tools" revision="cord-6.0" groups="build"/>
+<project path="docs" name="docs" revision="cord-6.0" groups="build"/>
 
 <project path="onos-apps" name="cord-onos-publisher" groups="onos"/>
 <project path="onos-apps/apps/aaa" name="aaa" groups="onos"/>
