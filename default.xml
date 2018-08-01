@@ -25,7 +25,7 @@
 <project path="onos-apps/apps/vtn" name="vtn" groups="onos"/>
 <project path="onos-apps/apps/sadis" name="sadis" groups="onos"/>
 
-<project path="test/cord-tester" name="cord-tester" groups="test"/>
+<project path="test/cord-tester" name="cord-tester" revision="cord-6.0" groups="test"/>
 <project path="test/fabric-oftest" name="fabric-oftest" groups="test"/>
 
 <project path="orchestration/xos" name="xos" groups="orchestration"/>
