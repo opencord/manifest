@@ -71,6 +71,7 @@
 
 <project path="orchestration/xos_services/exampleservice" name="exampleservice" groups="orchestration,services"/>
 <project path="orchestration/xos_services/simpleexampleservice" name="simpleexampleservice" groups="orchestration,services"/>
+<project path="orchestration/xos_services/k8sepcservice" name="k8sepcservice" groups="orchestration,services"/>
 
 <project path="orchestration/xos_services/acordion" name="acordion" groups="orchestration,services"/>
 
