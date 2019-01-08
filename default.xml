@@ -11,7 +11,7 @@
 
 <project path="helm-charts" name="helm-charts" groups="build"/>
 <project path="automation-tools" name="automation-tools" groups="build"/>
-<project path="docs" name="docs" groups="build"/>
+<project path="docs" name="docs" groups="build" revision="cord-6.1"/>
 
 <project path="onos-apps" name="cord-onos-publisher" groups="onos"/>
 <project path="onos-apps/apps/aaa" name="aaa" groups="onos"/>
