@@ -10,6 +10,8 @@
            sync-j="4" />
 
 <project path="helm-charts" name="helm-charts" groups="build"/>
+<project path="helm-charts/macro/cord-platform" name="cord-platform" groups="build"/>
+<project path="helm-charts/macro/seba" name="seba" groups="build"/>
 <project path="automation-tools" name="automation-tools" groups="build"/>
 <project path="docs" name="docs" groups="build"/>
 
