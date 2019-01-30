@@ -91,6 +91,7 @@
     <linkfile src="." dest="incubator/voltha/chameleon"/>
 </project>
 <project path="incubator/voltha" name="voltha" groups="incubation,voltha"/>
+<project path="incubator/voltha-bbsim" name="voltha-bbsim" groups="incubation,voltha"/>
 <project path="incubator/voltha/voltha/adapters/openolt/core" name="openolt" groups="incubation,voltha"/>
 
 </manifest>
