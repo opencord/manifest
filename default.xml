@@ -77,10 +77,8 @@
 
 <project path="orchestration/xos_services/acordion" name="acordion" groups="orchestration,services"/>
 
-<project path="orchestration/profiles/rcord" name="rcord" groups="orchestration,profiles"/>
-<project path="orchestration/profiles/ecord" name="ecord" groups="orchestration,profiles"/>
-<project path="orchestration/profiles/mcord" name="mcord" groups="orchestration,profiles"/>
-<project path="orchestration/profiles/opencloud" name="opencloud" groups="orchestration,profiles"/>
+<project path="orchestration/xos_services/rcord" name="rcord" groups="orchestration,services"/>
+<project path="orchestration/xos_services/mcord" name="mcord" groups="orchestration,services"/>
 
 <project path="orchestration/xos-gui" name="xos-gui" groups="orchestration"/>
 <project path="orchestration/xos-tosca" name="xos-tosca" groups="orchestration"/>
