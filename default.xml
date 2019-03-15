@@ -49,6 +49,7 @@
 <project path="orchestration/xos-services/vtn-service" name="vtn-service" groups="orchestration,services"/>
 <project path="orchestration/xos-services/hippie-oss" name="hippie-oss" groups="orchestration,services"/>
 <project path="orchestration/xos-services/att-workflow-driver" name="att-workflow-driver" groups="orchestration,services"/>
+<project path="orchestration/xos-services/tt-workflow-driver" name="tt-workflow-driver" groups="orchestration,services"/>
 
 <project path="orchestration/xos-services/vbbu" name="vBBU" groups="orchestration,services"/>
 <project path="orchestration/xos-services/vmme" name="vMME" groups="orchestration,services"/>
