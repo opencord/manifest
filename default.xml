@@ -17,73 +17,38 @@
 
 <project path="onos-apps" name="cord-onos-publisher" groups="onos"/>
 <project path="onos-apps/apps/aaa" name="aaa" groups="onos"/>
-<project path="onos-apps/apps/config" name="config" groups="onos"/>
 <project path="onos-apps/apps/dhcpl2relay" name="dhcpl2relay" groups="onos"/>
-<project path="onos-apps/apps/igmp" name="igmp" groups="onos"/>
-<project path="onos-apps/apps/igmpproxy" name="igmpproxy" groups="onos"/>
 <project path="onos-apps/apps/kafka-onos" name="kafka-onos" groups="onos"/>
-<project path="onos-apps/apps/mcast" name="mcast" groups="onos"/>
 <project path="onos-apps/apps/olt" name="olt" groups="onos"/>
-<project path="onos-apps/apps/vtn" name="vtn" groups="onos"/>
 <project path="onos-apps/apps/sadis" name="sadis" groups="onos"/>
 
 <project path="test/cord-tester" name="cord-tester" groups="test"/>
 <project path="test/fabric-oftest" name="fabric-oftest" groups="test"/>
 
 <project path="orchestration/xos" name="xos" groups="orchestration"/>
-<project path="orchestration/xos-services/addressmanager" name="addressmanager" groups="orchestration,services"/>
-<project path="orchestration/xos-services/templateservice" name="templateservice" groups="orchestration,services"/>
 <project path="orchestration/xos-services/fabric" name="fabric" groups="orchestration,services"/>
 <project path="orchestration/xos-services/fabric-crossconnect" name="fabric-crossconnect" groups="orchestration,services"/>
-<project path="orchestration/xos-services/hypercache" name="hypercache" groups="orchestration,services"/>
 <project path="orchestration/xos-services/kubernetes-service" name="kubernetes-service" groups="orchestration,services"/>
-<project path="orchestration/xos-services/monitoring" name="monitoring" groups="orchestration,services"/>
 <project path="orchestration/xos-services/onos-service" name="onos-service" groups="orchestration,services"/>
-<project path="orchestration/xos-services/openstack" name="openstack" groups="orchestration,services"/>
 <project path="orchestration/xos-services/vrouter" name="vrouter" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vsg" name="vsg" groups="orchestration,services"/>
 <project path="orchestration/xos-services/vsg-hw" name="vsg-hw" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vtr" name="vtr" groups="orchestration,services"/>
-<project path="orchestration/xos-services/globalxos" name="globalxos" groups="orchestration,services"/>
 <project path="orchestration/xos-services/olt-service" name="olt-service" groups="orchestration,services"/>
 <project path="orchestration/xos-services/vtn-service" name="vtn-service" groups="orchestration,services"/>
 <project path="orchestration/xos-services/hippie-oss" name="hippie-oss" groups="orchestration,services"/>
 <project path="orchestration/xos-services/att-workflow-driver" name="att-workflow-driver" groups="orchestration,services"/>
 <project path="orchestration/xos-services/tt-workflow-driver" name="tt-workflow-driver" groups="orchestration,services"/>
 
-<project path="orchestration/xos-services/vbbu" name="vBBU" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vmme" name="vMME" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vpgwc" name="vPGWC" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vsgw" name="vSGW" groups="orchestration,services"/>
 <project path="orchestration/xos-services/progran" name="progran" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vhss" name="vHSS" groups="orchestration,services"/>
-<project path="orchestration/xos-services/hss_db" name="hss_db" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vmm" name="vMM" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vsm" name="vSM" groups="orchestration,services"/>
-<project path="orchestration/xos-services/venb" name="venb" groups="orchestration,services"/>
-<project path="orchestration/xos-services/internetemulator" name="internetemulator" groups="orchestration,services"/>
-<project path="orchestration/xos-services/sdn-controller" name="sdn-controller" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vspgwc" name="vspgwc" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vspgwu" name="vspgwu" groups="orchestration,services"/>
-<project path="orchestration/xos-services/epc-service" name="epc-service" groups="orchestration,services"/>
-
-<project path="orchestration/xos-services/vEE" name="vEE" groups="orchestration,services"/>
-<project path="orchestration/xos-services/vEG" name="vEG" groups="orchestration,services"/>
-<project path="onos-apps/apps/carrierethernet" name="carrierethernet" groups="onos" upstream="master"/>
-<project path="orchestration/xos-services/vnaas" name="vnaas" groups="orchestration,services"/>
+<project path="orchestration/xos-services/k8sepcservice" name="k8sepcservice" groups="orchestration,services"/>
 
 <project path="orchestration/xos-services/exampleservice" name="exampleservice" groups="orchestration,services"/>
 <project path="orchestration/xos-services/simpleexampleservice" name="simpleexampleservice" groups="orchestration,services"/>
-<project path="orchestration/xos-services/k8sepcservice" name="k8sepcservice" groups="orchestration,services"/>
-
-<project path="orchestration/xos-services/acordion" name="acordion" groups="orchestration,services"/>
 
 <project path="orchestration/xos-services/rcord" name="rcord" groups="orchestration,services"/>
 <project path="orchestration/xos-services/mcord" name="mcord" groups="orchestration,services"/>
 
 <project path="orchestration/xos-gui" name="xos-gui" groups="orchestration"/>
 <project path="orchestration/xos-tosca" name="xos-tosca" groups="orchestration"/>
-<project path="orchestration/xos-sample-gui-extension" name="xos-sample-gui-extension" groups="orchestration"/>
 <project path="orchestration/xos-rest-gw" name="xos-rest-gw" groups="orchestration"/>
 
 <project path="component/chameleon" name="chameleon" groups="voltha">
