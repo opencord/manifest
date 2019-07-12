@@ -9,12 +9,12 @@
            remote="opencord"
            sync-j="4" />
 
-<project path="helm-charts" name="helm-charts" groups="build"/>
+<project path="helm-charts" name="helm-charts" groups="build" revision="cord-7.0"/>
 <project path="helm-charts/helm-repo-tools" name="helm-repo-tools" groups="build"/>
 <project path="helm-charts/macro/cord-platform" name="cord-platform" groups="build"/>
 <project path="helm-charts/macro/seba" name="seba" groups="build"/>
 <project path="automation-tools" name="automation-tools" groups="build"/>
-<project path="docs" name="docs" groups="build"/>
+<project path="docs" name="docs" groups="build" revision="cord-7.0"/>
 
 <project path="onos-apps" name="cord-onos-publisher" groups="onos"/>
 <project path="onos-apps/apps/aaa" name="aaa" groups="onos"/>
