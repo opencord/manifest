@@ -22,6 +22,8 @@
 <project path="onos-apps/apps/kafka-onos" name="kafka-onos" groups="onos"/>
 <project path="onos-apps/apps/olt" name="olt" groups="onos"/>
 <project path="onos-apps/apps/sadis" name="sadis" groups="onos"/>
+<project path="onos-apps/apps/bng" name="bng" groups="onos"/>
+<project path="onos-apps/apps/fabric-tofino" name="fabric-tofino" groups="onos"/>
 
 <project path="test/cord-tester" name="cord-tester" groups="test"/>
 <project path="test/fabric-oftest" name="fabric-oftest" groups="test"/>
@@ -38,6 +40,7 @@
 <project path="orchestration/xos-services/hippie-oss" name="hippie-oss" groups="orchestration,services"/>
 <project path="orchestration/xos-services/att-workflow-driver" name="att-workflow-driver" groups="orchestration,services"/>
 <project path="orchestration/xos-services/tt-workflow-driver" name="tt-workflow-driver" groups="orchestration,services"/>
+<project path="orchestration/xos-services/dt-workflow-driver" name="dt-workflow-driver" groups="orchestration,services"/>
 
 <project path="orchestration/xos-services/progran" name="progran" groups="orchestration,services"/>
 <project path="orchestration/xos-services/k8sepcservice" name="k8sepcservice" groups="orchestration,services"/>
